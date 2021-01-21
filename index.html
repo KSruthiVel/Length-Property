@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Length function</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <style>
+        body {
+            background: #8CB369  no-repeat fixed center;
+            }
+            h1{ 
+                color: #172815;
+                font-family:'Times New Roman', Times, serif;
+                font-weight: bold;
+                text-shadow: 2px 2px #ffffff;
+                }
+            label{
+                color:#18132A;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            p{
+                color : #3E5622;
+                font-weight : bold;
+            } 
+    </style>
 </head>
 <body>
     <div class="container">
         <h1 style="text-align: center;">Length Property</h1>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Input the text</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = "str" placeholder="Type here...">{% if strtext != None %}{{ strtext }}{% endif %}</textarea>
-        </div> 
-            <button type="submit" class="btn btn-secondary">Submit</button>
+        <form method = 'POST' >
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Input the text</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = "str" placeholder="Type here...">{% if strtext != None %}{{ strtext }}{% endif %}</textarea>
+            </div> 
+                <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
         {% if strlen != 0 %}
-        <p>Length of the string is {{ strlen }} characters.</p>
+        <p>Length of the string is {{ strlen }}.</p>
         {% endif %} 
     </div>
 </body>
